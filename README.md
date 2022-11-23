@@ -70,3 +70,13 @@ export SLACK_HOOK="https://example.com/some/address/you/should/get/from/the/slac
 
 ~/docker-deploy.sh | tee ~/$IMAGE_NAME.log
 ```
+
+## What if I want to force a build?
+
+If you set the `FORCE` environment variable to a value like `true`, then running `docker-deploy.sh` will rebuild and redeploy everything even if there isn't a new commit.
+
+E.g. with the above `myservice.sh`:
+
+```
+FORCE=true ~/myservice.sh
+```
