@@ -52,7 +52,7 @@ crontab -e
 Set the job for something like every 5 minutes:
 
 ```
-5 * * * * /home/myusername/myservice.sh
+*/5 * * * * /home/myusername/myservice.sh
 ```
 
 You can define your variables in a script like `~/myservice.sh`:
