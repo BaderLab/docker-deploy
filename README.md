@@ -60,6 +60,7 @@ You can define your variables in a script like `~/myservice.sh`:
 ```
 #!/bin/bash
 
+# Variables for docker-deploy.sh
 export IMAGE_NAME="myservice"
 export REPO_DIR="~/myservice"
 export PORT="3000"
@@ -67,6 +68,12 @@ export SLACK_CHANNEL="monitoring"
 export SLACK_USERNAME="myslackorg"
 export SLACK_AUTHOR="Deploy Bot"
 export SLACK_HOOK="https://example.com/some/address/you/should/get/from/the/slack/docs"
+
+# Maybe your service needs some env vars too:
+export FOO="bar"
+export BAR="baz"
+
+# If you have $REPO_DIR/.env on the file system, then that env file will be used.
 
 ~/docker-deploy.sh | tee ~/$IMAGE_NAME.log
 ```
