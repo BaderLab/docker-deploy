@@ -75,6 +75,7 @@ export BAR="baz"
 
 # If you have $REPO_DIR/.env on the file system, then that env file will be used.
 
+# Run the deployment script and save the output to a log file.
 ~/docker-deploy.sh | tee ~/$IMAGE_NAME.log
 ```
 
