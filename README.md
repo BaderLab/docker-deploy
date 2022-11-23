@@ -69,11 +69,7 @@ export SLACK_USERNAME="myslackorg"
 export SLACK_AUTHOR="Deploy Bot"
 export SLACK_HOOK="https://example.com/some/address/you/should/get/from/the/slack/docs"
 
-# Maybe your service needs some env vars too:
-export FOO="bar"
-export BAR="baz"
-
-# If you have $REPO_DIR/.env on the file system, then that env file will be used by the docker container.
+# Note: If you have $REPO_DIR/.env on the file system, then that env file will be used by the docker container.
 
 # Run the deployment script and save the output to a log file.
 ~/docker-deploy.sh | tee ~/$IMAGE_NAME.log
